@@ -1,0 +1,399 @@
+:root {
+  --primary: #8ca4bc;
+  --background: rgb(66, 102, 148);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: var(--background);
+  color: white;
+  /* min-height: 400vh; */
+}
+
+/* Navbar Start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #fff;
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar-logo img {
+  width: 5.5rem;
+}
+.navbar-nav a {
+  color: black;
+  font-size: 1rem;
+  margin: 0 1rem;
+  display: inline-block;
+}
+.navbar-nav a:hover {
+  color: var(--primary);
+  transition: 0.5s;
+}
+.navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid;
+  transform: scaleX(0);
+}
+.navbar-nav a:hover::after {
+  transform: scaleX(0.7);
+  transition: 0.7s;
+}
+.navbar-tambah a {
+  color: black;
+  margin: 0 0.5rem;
+}
+#menu {
+  display: none;
+}
+
+/* Navbar End */
+
+/* Home Start */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(Img/gary-lopater-dOOGrK3zcUc-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.home::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(66, 102, 148, 1) 7%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+.text {
+  color: black;
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.text h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 3px white;
+  line-height: 1.2;
+}
+.text p {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+  line-height: 1.4;
+  font-weight: 60;
+  text-shadow: 1px 1px 2px white;
+}
+.text button {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: var(--primary);
+  border-radius: 10px;
+  width: 10rem;
+  height: 5vh;
+}
+.text button:hover {
+  cursor: pointer;
+  color: white;
+  transition: 1s;
+}
+/* Home End */
+
+/* Visi Misi Start */
+.VM {
+  padding: 10rem 7% 1.4rem;
+  width: 100%;
+  height: 100vh;
+}
+.VM h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+.VM p {
+  font-size: 0.9rem;
+}
+.Visi {
+  width: 40%;
+  height: 45vh;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  border-radius: 30px;
+  padding-bottom: 10px;
+}
+.Misi {
+  width: 40%;
+  height: 45vh;
+  text-align: left;
+  padding-left: 10px;
+  background-color: #fff;
+  color: black;
+  border-radius: 30px;
+  padding-bottom: 10px;
+}
+/* Visi Misi End */
+
+/* Lokasi Start */
+.Lokasi {
+  background-color: white;
+  padding: 10rem 7% 1.4rem;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  align-items: center;
+  text-align: center;
+}
+.maps {
+  width: 60%;
+  margin-left: 20%;
+  height: 70vh;
+  display: flex;
+  background-color: rgb(119, 160, 212);
+  border-radius: 30px;
+  margin-top: 15px;
+}
+.map {
+  height: 100%;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  border-radius: 30px;
+}
+/* Lokasi End */
+
+/* Footer Start */
+footer {
+  background-color: var(--background);
+  text-align: center;
+  padding: 0.6rem 0;
+  margin-top: 0.8rem;
+  padding-top: 10px;
+}
+.sosial {
+  padding: 1rem 0;
+}
+.sosial a{
+  color:  white;
+  margin: 1rem;
+}
+.link{
+  margin-bottom: 10px;
+}
+.link a{
+  color: white;
+  margin: 0.8rem;
+}
+.credit {
+  font-size: 0.9rem;
+}
+.credit a{
+  color: black;
+  font-weight: bold;
+}
+
+/* Footer End */
+/* Responsive Start */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 70%;
+  }
+  .navbar-logo img {
+    width: 5rem;
+  }
+  .box {
+    margin-top: 12rem;
+  }
+  .Visi {
+    width: 40%;
+    height: 36.5vh;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+    padding-bottom: 10px;
+  }
+  .Visi p {
+    padding-top: 20px;
+  }
+  .Misi {
+    width: 40%;
+    height: 36.5vh;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #fff;
+    color: black;
+    border-radius: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 855px) {
+  html {
+    font-size: 60%;
+  }
+  .navbar-logo img {
+    width: 4.5rem;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 22rem;
+    height: 100vh;
+    transition: 0.4s;
+  }
+  .navbar-nav.active {
+    right: 0;
+  }
+  .navbar-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  .box {
+    margin-top: 17rem;
+  }
+  .Visi {
+    width: 40%;
+    height: 32vh;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding: 0 10px 0 10px;
+  }
+  .Misi {
+    width: 40%;
+    height: 32vh;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #fff;
+    color: black;
+    border-radius: 30px;
+    padding-bottom: 10px;
+  }
+  .Misi h2 {
+    padding-bottom: 20px;
+  }
+}
+
+/* Hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .navbar-logo img {
+    width: 4rem;
+  }
+  .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 15rem;
+    height: 100vh;
+    transition: 0.4s;
+  }
+  .navbar-nav.active {
+    right: 0;
+  }
+  .navbar-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+  }
+  .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar-nav a:hover::after {
+    transform: scaleX(0.19);
+  }
+  .box {
+    margin-top: 6rem;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+  }
+  .Visi {
+    width: 60%;
+    height: 32vh;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    border-radius: 30px;
+    padding-bottom: 10px;
+  }
+  .Misi {
+    width: 60%;
+    margin-top: 6rem;
+    height: 32vh;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #fff;
+    color: black;
+    border-radius: 30px;
+    padding-bottom: 10px;
+  }
+  .maps {
+    width: 90%;
+    margin-left: 6.5%;
+    height: 70vh;
+    display: flex;
+    background-color: rgb(119, 160, 212);
+    border-radius: 30px;
+    margin-top: 50px;
+  }
+  .map {
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+  }
+}
+
+/* Responsive End */
